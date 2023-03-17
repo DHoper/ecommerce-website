@@ -4,6 +4,7 @@ import Home from "./pages/Home.vue";
 import ProductList from "./pages/ProductList.vue";
 import Product from "./pages/Product.vue";
 
+// const port = process.env.PORT || 3000;
 
 const router = createRouter({
   history: createWebHistory(),

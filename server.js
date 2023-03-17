@@ -49,15 +49,4 @@ app.get("/api/product/:parameter", async (req, res) => {
   }
 });
 
-// API to get product by ID
-// app.get('/api/products/:id', async (req, res) => {
-//   const id = req.params.id;
-//   try {
-//     const product = await Product.findById(id);
-//     res.json(product);
-//   } catch (err) {
-//     res.status(500).json({ message: err.message });
-//   }
-// });
-
 app.listen(port, () => console.log(`Server running on port ${port}`));
