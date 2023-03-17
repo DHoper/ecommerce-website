@@ -58,8 +58,6 @@ export default {
     position: relative;
     width: 100%;
     min-width: 1440px;
-    // margin: auto;
-    // margin-top: -3.5%;
     --textH1: 4.5rem;
     --textP: 1rem;
     --textMargin: 17.5% 0 0 0;

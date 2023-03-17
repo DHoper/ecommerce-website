@@ -11,7 +11,6 @@
                 </ul>
                 <img class="cart" src="/assets/shared/desktop/icon-cart.svg">
             </div>
-            <div class="line" v-if="showLine"></div>
         </nav>
         <slot></slot>
     </div>
@@ -30,11 +29,6 @@ export default {
             default: true
         }
     },
-    // mounted() {
-    //     const divElement = document.querySelector('nav + div');  //設置插槽內首元素之上邊距
-    //     divElement.style.marginTop = '1rem';
-
-    // },
 }
 </script>
 
@@ -50,6 +44,8 @@ export default {
         margin: auto;
         position: relative;
         z-index: 1;
+        border-bottom: 1px solid #979797;
+        padding-bottom: 7.5rem;
 
         .navBlock {
             display: flex;
@@ -61,6 +57,7 @@ export default {
             position: absolute;
             width: 100%;
             top: 3rem;
+            
 
             .logo {
                 width: 10rem;
@@ -94,15 +91,6 @@ export default {
             }
         }
 
-        .line {
-            width: 100%;
-            margin: auto;
-            height: 0;
-            background-color: #979797;
-            position: absolute;
-            bottom: 0;
-            border-bottom: 1px solid rgba(72, 71, 71, 0.977);
-        }
     }
 }
 </style>

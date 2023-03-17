@@ -7,11 +7,14 @@ import TheHeader from './components/Layout/TheHeader.vue';
 
 <template>
   <TheHeader />
+<router-link class="backEndButton" to="/backEnd">
+    <div class="circle">後台</div>
+  </router-link>
   <!-- <router-view v-slot="slotProps">
-              <transition name="route" mode="out-in">
-                <component :is="slotProps.Component"></component>
-              </transition>
-            </router-view> -->
+                <transition name="route" mode="out-in">
+                  <component :is="slotProps.Component"></component>
+                </transition>
+              </router-view> -->
   <div id="main"><router-view /></div>
   <TheFooter />
 </template>
@@ -59,33 +62,42 @@ body {
   #main {
     max-width: 100%;
     overflow: scroll;
+
     &::-webkit-scrollbar {
-    display: none;
+      display: none;
+    }
   }
+}
+
+.backEndButton {
+  position: fixed;
+  top: 12vh;
+  left: .5vw;
+  z-index: 999;
+  text-decoration: none;
+  color: white;
+
+  .circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #797979;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: .5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    opacity: .4;
+    transition: all .3s ease-in;
+
+    &:hover {
+      background-color: #D87D4A;
+      opacity: 1;
+    }
   }
-}
-
-.route-enter-from {
-  opacity: 0;
-  transform: translateY(-30px);
-}
-
-.route-leave-to {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.route-enter-active {
-  transition: all 0.3s ease-out;
-}
-
-.route-leave-active {
-  transition: all 0.3s ease-in;
-}
-
-.route-enter-to,
-.route-leave-from {
-  opacity: 1;
-  transform: translateY(0);
 }
 </style>

@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "./pages/Home.vue";
 import ProductList from "./pages/ProductList.vue";
 import Product from "./pages/Product.vue";
+import BackEnd from "./pages/BackEnd.vue";
+
 
 const router = createRouter({
   history: createWebHistory(),
@@ -22,10 +24,15 @@ const router = createRouter({
       name: "Product",
       props: true,
     },
+    {
+      path: "/backEnd",
+      component: BackEnd,
+      name: "BackEnd",
+    },
   ],
-  scrollBehavior(to, from, savedPosition) {
-    return { top: 0 };
-  },
+  // scrollBehavior(to, from, savedPosition) {
+  //   return { top: 0 };
+  // },
 });
 export default router;
 

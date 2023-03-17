@@ -5,7 +5,7 @@ import CopyBlock from '../components/Item/CopyBlock.vue';
 
 <template>
     <div id="product">
-        <router-link :to="`/productList/${product.category}`" class="backButton">返回</router-link>
+        <button class="backButton" @click="$router.go(-1)">返回</button>
         <div class="haedBlock">
             <div class="pictureBlock" :style="{ 'background-image': 'url(' + product.image + ')' }"></div>
             <div class="textBlock">
@@ -224,7 +224,7 @@ export default {
                 font-size: 1.2rem;
                 line-height: 2rem;
                 opacity: .6;
-                margin-top: 3rem;
+                margin-top: 5rem;
                 margin-bottom: 3rem;
             }
 

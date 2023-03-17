@@ -91,7 +91,6 @@ export default {
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
-    // margin-bottom: 0rem;
 }
 
 ul {
@@ -126,8 +125,8 @@ ul {
                 --textLineHeight: 2rem;
                 --textHeight: 100%;
                 --textWidth: 70%;
-                --textMargin: 15% 0 0 0;
-                --textPMargin: 7.5% 0;
+                --textPMargin: auto;
+                padding-top: 6.5rem;
             }
         }
     }
