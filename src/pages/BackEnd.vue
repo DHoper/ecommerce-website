@@ -66,6 +66,9 @@
 <script>
 import axios from "axios";
 
+let port = "https://32cc-2001-b011-9820-3bc6-c0a0-8079-3278-d3a1.jp.ngrok.io ";
+// let port = "http://localhost:3000";
+
 export default {
   data() {
     return {
@@ -86,7 +89,7 @@ export default {
   methods: {
     async getProducts() {
       try {
-        const res = await axios.get(`http://localhost:3000/api/products`);
+        const res = await axios.get(`${port}/api/products`);
         this.products = res.data.reverse();
         console.log(this.products);
         return this.products;
@@ -97,7 +100,7 @@ export default {
     editProduct(product) {},
     async deleteProduct(id) {
       try {
-        await axios.delete(`http://localhost:3000/api/product/${id}`);
+        await axios.delete(`${port}/api/product/${id}`);
         console.log('刪除成功');
         this.getProducts()
       } catch (error) {
