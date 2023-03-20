@@ -37,7 +37,7 @@ export default router;
 import axios from "axios";
 
 export function getProducts(category) {
-  return axios.get(`${port}/api/products/${category}`)
+  return axios.get('https://32cc-2001-b011-9820-3bc6-c0a0-8079-3278-d3a1.jp.ngrok.io/api/products/headphones')
     .then((res) => res.data)
     .catch((err) => {
       throw err;
