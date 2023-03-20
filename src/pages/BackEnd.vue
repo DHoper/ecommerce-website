@@ -59,14 +59,15 @@
       <h3>{{ product.name }}</h3>
       <button><router-link :to="`/product/${product._id}`" class="linkButton">查看</router-link></button>
       <button @click="editProduct(product)">修改</button>
-      <button @click="deleteProduct(product._id)">刪除</button>
+      <button @click="delete(product._id)">刪除</button>
     </div>
   </div>
 </template>
 <script>
 import axios from "axios";
+import { getAllProduct, deleteProduct } from '../router.js';
 
-let port = "https://4a7d-2001-b011-9820-3bc6-c0a0-8079-3278-d3a1.jp.ngrok.io";
+let port = "https://1fab-2001-b011-9820-3bc6-c0a0-8079-3278-d3a1.jp.ngrok.io";
 // let port = "http://localhost:3000";
 
 export default {
@@ -87,26 +88,15 @@ export default {
     };
   },
   methods: {
-    async getProducts() {
-      try {
-        const res = await axios.get(`${port}/api/products`);
-        this.products = res.data.reverse();
-        console.log(this.products);
-        return this.products;
-      } catch (err) {
-        throw err;
-      }
+    async getAll() {
+      const response = await getAllProduct();
+      this.products = response;
+      // console.log("getAll", this.products);
     },
     editProduct(product) {},
-    async deleteProduct(id) {
-      try {
-        await axios.delete(`${port}/api/product/${id}`);
-        console.log('刪除成功');
-        this.getProducts()
-      } catch (error) {
-        console.error(error);
-        console.log('axios錯誤');
-      }
+    async delete(id) {
+      await deleteProduct(id);
+      // console.log(delete, id);
     },
     submitForm() {
       const formData = new FormData();
@@ -138,7 +128,7 @@ export default {
     },
   },
   created() {
-    this.getProducts();
+    this.getAll();
   },
 };
 </script>

@@ -2,17 +2,6 @@ import express from "express";
 import cors from "cors";
 const app = express();
 
-import localtunnel from'localtunnel';
-
-(async () => {
-  const tunnel = await localtunnel({ port: 3000 });
-
-  tunnel.url;
-  console.log(tunnel.url);
-
-  tunnel.on('close', () => {
-  });
-})();
 const port = process.env.PORT || 3000;
 
 import mongoose from "mongoose";
@@ -31,7 +20,12 @@ main()
   .then((solved) => console.log(solved, "success!!!"))
   .catch((err) => console.log("777", err));
 
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+}));
 
 ///////////////API/////////////////
 

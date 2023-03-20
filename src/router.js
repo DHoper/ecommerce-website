@@ -4,7 +4,7 @@ import Home from "./pages/Home.vue";
 import ProductList from "./pages/ProductList.vue";
 import Product from "./pages/Product.vue";
 import BackEnd from "./pages/BackEnd.vue";
-let port = "https://4a7d-2001-b011-9820-3bc6-c0a0-8079-3278-d3a1.jp.ngrok.io";
+let port = "https://1fab-2001-b011-9820-3bc6-c0a0-8079-3278-d3a1.jp.ngrok.io";
 // let port = "http://localhost:3000";
 
 const router = createRouter({
@@ -50,3 +50,20 @@ export function getProduct(id) {
       throw err;
     });
 }
+
+export function getAllProduct() {
+  return axios.get(`${port}/api/products`)
+    .then((res) => res.data)
+    .catch((err) => {
+      throw err;
+    });
+}
+
+export function deleteProduct(id) {
+  return axios.delete(`${port}/api/product/${id}`)
+    .then((res) => res.data)
+    .catch((err) => {
+      throw err;
+    });
+}
+
