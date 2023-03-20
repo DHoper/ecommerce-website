@@ -19,7 +19,7 @@ main()
   .then((solved) => console.log(solved, "success!!!"))
   .catch((err) => console.log("777", err));
 
-  app.use(cors());
+app.use(cors());
 
 ///////////////API/////////////////
 
