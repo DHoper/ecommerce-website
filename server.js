@@ -19,11 +19,7 @@ main()
   .then((solved) => console.log(solved, "success!!!"))
   .catch((err) => console.log("777", err));
 
-  app.use(cors({
-    origin: 'http://localhost:5173', // 允許跨來源的網域
-    optionsSuccessStatus: 200, // 將所有請求的 HTTP 狀態碼設定為 200
-    credentials: true // 允許搭配驗證資訊 (例如 Cookie) 傳送
-  }));
+  app.use(cors());
 
 ///////////////API/////////////////
 
