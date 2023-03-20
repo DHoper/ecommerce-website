@@ -4,7 +4,7 @@ import Home from "./pages/Home.vue";
 import ProductList from "./pages/ProductList.vue";
 import Product from "./pages/Product.vue";
 import BackEnd from "./pages/BackEnd.vue";
-let port = "https://32cc-2001-b011-9820-3bc6-c0a0-8079-3278-d3a1.jp.ngrok.io ";
+let port = "https://32cc-2001-b011-9820-3bc6-c0a0-8079-3278-d3a1.jp.ngrok.io";
 // let port = "http://localhost:3000";
 
 const router = createRouter({
@@ -37,7 +37,7 @@ export default router;
 import axios from "axios";
 
 export function getProducts(category) {
-  return axios.get('https://32cc-2001-b011-9820-3bc6-c0a0-8079-3278-d3a1.jp.ngrok.io/api/products/headphones')
+  return axios.get(`${port}/api/products/${category}`)
     .then((res) => res.data)
     .catch((err) => {
       throw err;
