@@ -4,7 +4,7 @@ import Home from "./pages/Home.vue";
 import ProductList from "./pages/ProductList.vue";
 import Product from "./pages/Product.vue";
 import BackEnd from "./pages/BackEnd.vue";
-let port = "https://mean-hands-drum-36-234-78-1.loca.lt";
+let port = "https://poor-pigs-change-36-234-78-1.loca.lt";
 // let port = "http://localhost:3000";
 
 const router = createRouter({

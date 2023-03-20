@@ -66,7 +66,7 @@
 <script>
 import axios from "axios";
 
-let port = "https://mean-hands-drum-36-234-78-1.loca.lt";
+let port = "https://poor-pigs-change-36-234-78-1.loca.lt";
 // let port = "http://localhost:3000";
 
 export default {
