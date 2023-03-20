@@ -66,7 +66,7 @@
 <script>
 import axios from "axios";
 
-let port = "https://poor-pigs-change-36-234-78-1.loca.lt";
+let port = "https://4a7d-2001-b011-9820-3bc6-c0a0-8079-3278-d3a1.jp.ngrok.io";
 // let port = "http://localhost:3000";
 
 export default {
