@@ -30,9 +30,6 @@ const router = createRouter({
       name: "BackEnd",
     },
   ],
-  // scrollBehavior(to, from, savedPosition) {
-  //   return { top: 0 };
-  // },
 });
 export default router;
 
