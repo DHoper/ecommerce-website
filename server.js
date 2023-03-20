@@ -1,6 +1,18 @@
 import express from "express";
 import cors from "cors";
 const app = express();
+
+import localtunnel from'localtunnel';
+
+(async () => {
+  const tunnel = await localtunnel({ port: 3000 });
+
+  tunnel.url;
+  console.log(tunnel.url);
+
+  tunnel.on('close', () => {
+  });
+})();
 const port = process.env.PORT || 3000;
 
 import mongoose from "mongoose";
