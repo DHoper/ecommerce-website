@@ -14,7 +14,7 @@ main()
   .then((solved) => console.log(solved, "success!!!"))
   .catch((err) => console.log("777", err));
 
-import Product from "./productSchema.js";
+import Product from "../api/productSchema.js";
 
 const productsData = [
   {
