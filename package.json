@@ -20,7 +20,8 @@
     "vite": "^4.0.4",
     "vue": "^3.2.41",
     "vue-router": "4",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "webpack": "^5.76.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.2.0",

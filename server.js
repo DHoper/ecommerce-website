@@ -3,6 +3,11 @@ import cors from "cors";
 const app = express();
 const port = process.env.PORT || 3000;
 
+import path from 'path';
+import serveStatic from 'serve-static';
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+app.use(serveStatic(path.join(__dirname, 'dist')));
+
 import mongoose from "mongoose";
 import Product from "./productSchema.js";
 const dbUrl =
@@ -20,6 +25,7 @@ main()
   .catch((err) => console.log("777", err));
 
 app.use(cors());
+
 
 ///////////////API/////////////////
 

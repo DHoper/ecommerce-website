@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
-const ImageSchema = new Schema({
-  url: String,
-  filename: String,
-});
+// const ImageSchema = new Schema({
+//   url: String,
+//   filename: String,
+// });
 
 // ImageSchema.virtual("thumbnail").get(function () {
 //   return this.url.replace("/upload", "/upload/w_100");
